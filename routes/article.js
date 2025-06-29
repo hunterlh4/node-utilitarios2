@@ -263,42 +263,42 @@ let article = [
   }
 ];
 
-const getArticle = (req, res) => {
-  res.json(article);
-};
+// const getArticle = (req, res) => {
+//   res.json(article);
+// };
 
-const getArticleById = (req, res) => {
-  const result = article.find((b) => b.id === req.params.id);
-  if (!result) return res.status(404).json({ error: "articulo no encontrada" });
-  res.json(result.contenido);
-};
+// const getArticleById = (req, res) => {
+//   const result = article.find((b) => b.id === req.params.id);
+//   if (!result) return res.status(404).json({ error: "articulo no encontrada" });
+//   res.json(result.contenido);
+// };
 
-const getArticleBySlug = (req, res) => {
-  const result = article.find((b) => b.slug === req.params.slug);
-  if (!result)
-    return res.status(404).json({ error: "articulo por slug no encontrada" });
-  res.json(result.contenido);
-};
+// const getArticleBySlug = (req, res) => {
+//   const result = article.find((b) => b.slug === req.params.slug);
+//   if (!result)
+//     return res.status(404).json({ error: "articulo por slug no encontrada" });
+//   res.json(result.contenido);
+// };
 
-const getArticlesByCategory = (req, res) => {
-  const categories = article.map(({ id, title, type, icon }) => ({
-    id,
-    title,
-    type,
-    icon
-  }));
-  res.json(categories);
-};
+// const getArticlesByCategory = (req, res) => {
+//   const categories = article.map(({ id, title, type, icon }) => ({
+//     id,
+//     title,
+//     type,
+//     icon
+//   }));
+//   res.json(categories);
+// };
 
-const getarticleByCategorySlug = (req, res) => {
-  const slug = req.params.category;
-  const result = article.filter((b) => b.slug === slug);
-  if (result.length === 0)
-    return res
-      .status(404)
-      .json({ error: "No se encontraron artículos en esta categoría" });
-  res.json(result);
-};
+// const getarticleByCategorySlug = (req, res) => {
+//   const slug = req.params.category;
+//   const result = article.filter((b) => b.slug === slug);
+//   if (result.length === 0)
+//     return res
+//       .status(404)
+//       .json({ error: "No se encontraron artículos en esta categoría" });
+//   res.json(result);
+// };
 
 router.get("/articles", (req, res) => {
   res.send(article);
