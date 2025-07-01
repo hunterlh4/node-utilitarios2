@@ -7,16 +7,39 @@ let article = [
     title: "react",
     type: "frontend",
     slug: "react",
-    contenido: [
+    publicacion: [
       {
         id: 1,
         titulo: "Guía completa de React con Hooks",
         descripcion:
           "Introducción a React con ejemplos prácticos usando Hooks.",
         slug: "/guia-completa-de-react-con-hooks",
-        contenido: "Aquí va el contenido extenso o resumido de la guía...",
+        contenido: [
+          {
+            tipo: "titulo",
+            texto: "¿Qué es React?"
+          },
+          {
+            tipo: "parrafo",
+            texto:
+              "React es una biblioteca de JavaScript para construir interfaces..."
+          },
+          {
+            tipo: "codigo",
+            lenguaje: "js",
+            texto: `const [count, setCount] = useState(0)`
+          },
+          {
+            tipo: "imagen",
+            url: "https://example.com/react-diagrama.png",
+            alt: "Diagrama de componentes"
+          }
+        ],
         tags: ["react", "hooks", "javascript"],
         fecha: "2023-10-01 12:00:00",
+        author: "Juan Pérez",
+        authorSlug: "juan-perez",
+        authorImage: "https://example.com/juan-perez.jpg",
         links: [
           {
             name: "Documentación oficial",
@@ -35,6 +58,9 @@ let article = [
           "Uso de React Context para manejar el estado global de la aplicación.",
         slug: "/uso-de-context-api-en-react",
         contenido: "Explicación de cómo funciona Context...",
+        author: "Juan Pérez",
+        authorSlug: "juan-perez",
+        authorImage: "https://example.com/juan-perez.jpg",
         tags: ["react", "estado", "context"],
         fecha: "2023-11-10 08:45:00",
         links: [
@@ -51,7 +77,7 @@ let article = [
     title: "angular",
     type: "frontend",
     slug: "angular",
-    contenido: [
+    publicacion: [
       {
         id: 1,
         titulo: "Introducción a Angular y componentes",
@@ -59,6 +85,9 @@ let article = [
         slug: "/guias/angular/componentes-basicos",
         contenido:
           "Angular es un framework para crear SPA utilizando TypeScript...",
+        author: "Juan Pérez",
+        authorSlug: "juan-perez",
+        authorImage: "https://example.com/juan-perez.jpg",
         tags: ["angular", "componentes", "typescript"],
         fecha: "2024-01-05 10:30:00",
         links: [
@@ -75,7 +104,7 @@ let article = [
     title: "vue",
     type: "frontend",
     slug: "vue",
-    contenido: [
+    publicacion: [
       {
         id: "1",
         titulo: "Primeros pasos con Vue 3",
@@ -83,6 +112,9 @@ let article = [
         slug: "/guias/vue/vue3-intro",
         contenido:
           "Vue 3 utiliza una nueva Composition API que mejora la organización del código...",
+        author: "Juan Pérez",
+        authorSlug: "juan-perez",
+        authorImage: "https://example.com/juan-perez.jpg",
         tags: ["vue", "javascript", "composition-api"],
         fecha: "2024-03-10 15:00:00",
         links: [
@@ -99,85 +131,35 @@ let article = [
     title: "prisma",
     type: "orm",
     slug: "prisma",
-    contenido: [
-      {
-        id: 1,
-        titulo: "Primeros pasos con Prisma ORM",
-        descripcion: "Cómo configurar Prisma en un proyecto Node.js",
-        slug: "/guias/prisma/primeros-pasos",
-        contenido: "Comienza inicializando el esquema con `npx prisma init`...",
-        tags: ["prisma", "orm", "node"],
-        fecha: "2024-02-15 16:00:00",
-        links: [
-          {
-            name: "Documentación oficial",
-            url: "https://www.prisma.io/docs"
-          }
-        ]
-      }
-    ]
+    publicacion: []
   },
   {
     id: 5,
     title: "node",
     type: "frontend",
     slug: "node",
-    contenido: [
-      {
-        id: 1,
-        titulo: "Servidor básico con Express.js",
-        descripcion: "Aprende a levantar un servidor con Node y Express.",
-        slug: "/guias/node/express-basico",
-        contenido:
-          "Express es un framework minimalista para Node.js que facilita la creación de APIs...",
-        tags: ["node", "express", "api"],
-        fecha: "2024-04-01 09:00:00",
-        links: [
-          {
-            name: "Guía Express",
-            url: "https://expressjs.com/en/starter/hello-world.html"
-          }
-        ]
-      }
-    ]
+    publicacion: []
   },
   {
     id: 6,
     title: "typescript",
     type: "frontend",
     slug: "typescript",
-    contenido: [
-      {
-        id: "1",
-        titulo: "Fundamentos de TypeScript",
-        descripcion: "Tipos, interfaces y clases en TypeScript.",
-        slug: "/guias/typescript/fundamentos",
-        contenido:
-          "TypeScript extiende JavaScript con tipado estático opcional...",
-        tags: ["typescript", "tipado", "clases", "interfaces"],
-        fecha: "2024-05-12 14:20:00",
-        links: [
-          {
-            name: "Documentación oficial",
-            url: "https://www.typescriptlang.org/docs/"
-          }
-        ]
-      }
-    ]
+    publicacion: []
   },
   {
     id: 7,
     title: "csharp",
     type: "backend",
     slug: "csharp",
-    contenido: []
+    publicacion: []
   },
   {
     id: 8,
     title: "go",
     type: "backend",
     slug: "go",
-    contenido: []
+    publicacion: []
   },
 
   {
@@ -185,75 +167,75 @@ let article = [
     title: "sql",
     type: "base de datos",
     slug: "sql",
-    contenido: []
+    publicacion: []
   },
   {
     id: 10,
     title: "ui/ux",
     type: "diseño",
     slug: "uiux",
-    contenido: []
+    publicacion: []
   },
   {
     id: 11,
     title: "tailwind",
     type: "frontend",
     slug: "tailwind",
-    contenido: []
+    publicacion: []
   },
   {
     id: 12,
     title: "herramientas",
     type: "utilidades",
     slug: "herramientas",
-    contenido: []
+    publicacion: []
   },
   {
     id: 13,
     title: "nextjs",
     type: "fullstack",
     slug: "nextjs",
-    contenido: []
+    publicacion: []
   },
   {
     id: 14,
     title: "nestjs",
     type: "backend",
     slug: "nestjs",
-    contenido: []
+    publicacion: []
   },
   {
     id: 15,
     title: "flutter",
     type: "mobile",
     slug: "flutter",
-    contenido: []
+    publicacion: []
   },
   {
     id: 16,
     title: "react native",
     type: "mobile",
     slug: "react-native",
-    contenido: []
+    publicacion: []
   },
   {
     id: 17,
     title: "otros",
     type: "utilidades",
     slug: "otros",
-    contenido: []
+    publicacion: []
   }
 ];
 
 // Obtener todas las categorías
 router.get("/articles/getAllCategory", (req, res) => {
   const categories = article.map(
-    ({ id, title, type, icon, slug, contenido }) => ({
+    ({ id, title, type, icon, slug, publicacion }) => ({
       id,
       title,
       type,
       slug,
-      total: contenido.length,
+      total: publicacion.length,
       icon
     })
   );
@@ -279,9 +261,9 @@ router.get("/article/getAllContentArticleByArticleSlug/:slug", (req, res) => {
 
   res.status(200).json({
     status: 200,
-    message: `Contenido del artículo ${req.params.slug}`,
-    total: result.contenido.length,
-    data: result.contenido
+    message: `publicacion del artículo ${req.params.slug}`,
+    total: result.publicacion.length,
+    data: result.publicacion
   });
 });
 
@@ -290,19 +272,45 @@ router.get("/article/getContentArticleByArticleSlug/:slug", (req, res) => {
   const slugParam = "/" + req.params.slug;
 
   for (const art of article) {
-    const contenido = art.contenido.find((c) => c.slug === slugParam);
-    if (contenido) {
+    const publicaciones = art.publicacion;
+    const index = publicaciones.findIndex((c) => c.slug === slugParam);
+
+    if (index !== -1) {
+      const actual = publicaciones[index];
+
+      const anterior =
+        index > 0
+          ? {
+              id: publicaciones[index - 1].id,
+              titulo: publicaciones[index - 1].titulo,
+              slug: publicaciones[index - 1].slug
+            }
+          : null;
+
+      const siguiente =
+        index < publicaciones.length - 1
+          ? {
+              id: publicaciones[index + 1].id,
+              titulo: publicaciones[index + 1].titulo,
+              slug: publicaciones[index + 1].slug
+            }
+          : null;
+
       return res.status(200).json({
         status: 200,
-        message: "Contenido encontrado",
-        data: contenido
+        message: "publicacion encontrado",
+        data: {
+          actual,
+          anterior,
+          siguiente
+        }
       });
     }
   }
 
   return res.status(404).json({
     status: 404,
-    message: "Contenido no encontrado para el slug proporcionado",
+    message: "publicacion no encontrado para el slug proporcionado",
     data: null
   });
 });
@@ -312,7 +320,7 @@ router.get("/article/getAllContent", (req, res) => {
 
   // 1. Juntar todos los contenidos con metadatos de su categoría
   let allContent = article.flatMap((a) =>
-    a.contenido.map((c) => ({
+    a.publicacion.map((c) => ({
       ...c,
       categoria: a.title,
       categoriaSlug: a.slug
@@ -356,7 +364,7 @@ router.get("/article/getAllContent", (req, res) => {
   // 7. Respuesta
   res.status(200).json({
     status: 200,
-    message: "Contenido global paginado",
+    message: "publicacion global paginado",
     total,
     currentPage: Number(page),
     totalPages,
@@ -364,6 +372,42 @@ router.get("/article/getAllContent", (req, res) => {
   });
 });
 
+router.get("/article/author/:authorSlug", (req, res) => {
+  const publicaciones = article.flatMap((a) =>
+    a.publicacion
+      .filter((p) => p.authorSlug === req.params.authorSlug)
+      .map((p) => ({
+        ...p,
+        categoria: a.title,
+        categoriaSlug: a.slug
+      }))
+  );
+
+  res.json({
+    status: 200,
+    message: `Publicaciones del autor ${req.params.authorSlug}`,
+    total: publicaciones.length,
+    data: publicaciones
+  });
+});
+
+router.get("/article/recent", (req, res) => {
+  const limit = parseInt(req.query.limit) || 5;
+  let all = article.flatMap((a) =>
+    a.publicacion.map((p) => ({
+      ...p,
+      categoria: a.title,
+      categoriaSlug: a.slug
+    }))
+  );
+
+  all.sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
+  res.json({
+    status: 200,
+    message: "Últimas publicaciones",
+    data: all.slice(0, limit)
+  });
+});
 // router.get("/article/content/paginate/:slug", (req, res) => {
 //   const { slug } = req.params;
 //   const page = parseInt(req.query.page) || 1;
